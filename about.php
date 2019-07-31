@@ -25,7 +25,7 @@
     <div class="content about">
       <section>
           <h2>About MagicPost</h2>
-          <p>MagicPad is an easy to use, offline encryption suite. With MagicPad, you can encrypt/decrypt messages, hide messages in images i.e., steganographs, and encrypt/decrypt files. Other than to search / upload public keys, MagicPad works completely offline. Your information never touches a server and no usage data is collected.</p>
+          <p>MagicPost is an open-source, free pastebin-like service for encrypted messages. For all your encryption needs, please try <a href="https://www.magicpad.io" target="_blank" class="_blank">MagicPad</a>.</p>
       </section>
       <section>
         <h3>Credits</h3>
@@ -36,8 +36,7 @@
       <section>
         <h3>Links</h3>
         <ul class="credits-list">
-          <li><a class="b-link" href="https://www.magicpad.io" target="_blank" rel="noopener noreferrer nofollow">MagicPad website</a></li>
-          <li><a class="b-link" href="https://github.com/hyundotio/magicpad" target="_blank" rel="noopener noreferrer nofollow">MagicPad GitHub</a></li>
+          <li><a class="b-link" href="https://github.com/hyundotio/magicpost" target="_blank" rel="noopener noreferrer nofollow">MagicPad GitHub</a></li>
         </ul>
       </section>
       <section>
