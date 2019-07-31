@@ -1,0 +1,365 @@
+html {
+  font-size:14px;
+}
+body {
+  font-family:'IBM Plex Sans', sans-serif;
+  box-sizing: border-box;
+  background-color:#F6F6F6;
+}
+button, label {
+	outline:0;
+	background-color:transparent;
+	font-size: 1em;
+	font-family: 'IBM Plex Sans';
+	margin: 0;
+	padding: 0;
+	border: 0;
+	height: 3em;
+}
+a {
+  color:#0066FF;
+  text-decoration: none;
+  transition:0.2s color ease-in;
+}
+a:focus {
+  color: #0530AD;
+}
+a:hover {
+  color: #054ADA;
+}
+form {
+  overflow:hidden;
+  position:relative;
+}
+input:focus, button:focus, textarea:focus, input:active, button:active, textarea:active {
+  outline-style:none;
+  box-shadow:none;
+  border-color:transparent;
+}
+input, button, textarea {
+  -moz-outline-style: none;
+  font-family:'IBM Plex Sans', sans-serif;
+  outline:none;
+}
+button {
+  background-color: transparent;
+  border:0;
+  margin:0;
+  padding:0;
+  cursor:pointer;
+}
+main {
+  width:1024px;
+  margin:auto;
+  padding:1rem 2rem 2rem 2rem;
+  box-sizing:border-box;
+}
+h1 {
+  font-size:2.5rem;
+  margin-bottom:0.75rem;
+}
+h2 {
+  position: relative;
+  font-size: 1.75em;
+  margin-bottom: 1.5em;
+}
+h2::after {
+    content: ' ';
+    background-color: #000;
+    width: 1em;
+    height: 1px;
+    left: 0;
+    bottom: -0.75em;
+    position: absolute;
+}
+h3 {
+	font-size: 1em;
+	padding-bottom: 0.5em;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	overflow: hidden;
+	width:100%;
+}
+section {
+    margin-top: 1.5em;
+}
+.about p {
+  max-width: 24em;
+line-height: 1.33em;
+}
+.about h3 {
+  font-weight:600;
+}
+.credits-list {
+    line-height: 1.5em;
+}
+.lip a {
+  color:#FFF;
+  text-decoration: underline;
+}
+.lip a:focus, .lip a:hover, .lip:active {
+  color:#FFF;
+}
+.no-margin {
+  margin:0;
+}
+.main-nav {
+  box-sizing:border-box;
+  height:3rem;
+}
+.main-nav li {
+  float:left;
+  margin-right:2rem;
+}
+.main-nav li:last-of-type {
+  float:right;
+  margin:0 0 0 2rem;
+}
+.index-search-form {
+  margin: 0.5rem 0 1rem;
+}
+.search-bar {
+  width:100%;
+  position:relative;
+  box-sizing: border-box;
+  padding:1rem 3rem 1rem 1rem;
+  border:0;
+  border-bottom:1px solid #C0C0C0;
+  margin-bottom:1rem;
+}
+.search-box {
+  padding:2rem;
+  width:40rem;
+  height: 15rem;
+  box-sizing: border-box;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin: -7.5rem 0 0 -20rem;
+}
+.search-button {
+  position:absolute;
+  top: 0;
+  right: 0;
+  width: 1.5rem;
+  height: 1.5rem;
+  padding: calc(0.66rem - 1px);
+  opacity:0.66;
+  transition:0.3s opacity linear;
+  border:1px solid transparent;
+}
+.search-button:hover {
+  opacity:1;
+}
+.search-header-box {
+  margin-top: 0.75rem;
+}
+.search-header-box h1 {
+  float:left;
+  width:12rem;
+}
+.search-header-box .search-bar {
+  float: left;
+  width: calc(100% - 2rem);
+  margin-left: 2rem;
+}
+.mobile-nav {
+  display:none;
+  overflow:hidden;
+  position: relative;
+}
+.mobile-nav h1 {
+  font-size:1rem;
+  text-align:center;
+  margin:0.5rem 0 0.75rem 0;
+}
+.home .mobile-nav h1 {
+  color:transparent;
+}
+.mobile-menu {
+  position: absolute;
+  left: 0;
+  top: -0.375rem;
+  line-height: 0;
+  transition:0.3s opacity linear;
+  opacity:0.66;
+}
+.mobile-menu:hover, .mobile-menu.active {
+  opacity:1;
+}
+.content {
+  margin-top:3rem;
+}
+.icon-button:hover {
+  opacity:1;
+}
+.icon-button {
+  opacity:0.66;
+    transition: opacity 0.1s ease-out;
+    cursor: pointer;
+}
+.button-1, .button-1:hover, .button-1:active, .button-1:focus {
+  border:0;
+}
+.button-1, .button-2, .button-9 {
+	transition: background-color 0.1s ease-out, color 0.1s ease-out, visibility 0.1s ease-out, opacity 0.1s ease-out;
+	line-height: 1em;
+	cursor: pointer;
+	padding: 1em;
+	text-align: left;
+	box-sizing: border-box;
+	margin-right: 1px;
+	float: left;
+	display: block;
+	min-width: 11em;
+}
+.button-1, .button-2, .button-9 {
+	min-width:8.5em;
+}
+.button-1:active img, .button-2:active img, .button-9:active img {
+	opacity: 0.66;
+}
+.button-1:active, .button-2:active, .button-9:active {
+	color: rgba(255, 255, 255, 0.66);
+}
+.button-1 {
+	color: #FFF;
+	background-color: #0062ff;
+}
+.button-1:focus {
+	background-color: #0530AD;
+}
+.button-1:hover {
+	background-color: #054ADA;
+}
+button::-moz-focus-inner, input::-moz-focus-inner, textarea::-moz-focus-inner, a::-moz-focus-inner {
+	outline:0;
+	border:0;
+}
+input::placeholder, textarea::placeholder {
+	color:#999999;
+}
+textarea {
+	color:#000;
+	transition: background-color 0.1s ease-out, border 0.1s ease-out;
+	resize: vertical;
+	outline: 0;
+	border-radius: 2px;
+	border: 1px solid #f3f3f3;
+	width: 100%;
+	height: 13em;
+	font-family: 'IBM Plex Sans', sans-serif;
+	display: block;
+	clear: both;
+	padding: 0.5em 1em 1em 1em;
+	font-size: 1em;
+	box-sizing: border-box;
+}
+textarea:hover {
+	border:1px solid #0062FF;
+}
+input[type="email"], input[type="text"], input[type="password"] {
+	background-color:#FFF;
+	color:#000;
+	transition: background-color 0.1s ease-out, border 0.1s ease-out;
+	font-family: 'IBM Plex Sans', sans-serif;
+	font-size: 1em;
+	padding: 0.5em 0.75em 0.75em 0.75em;
+	border: 1px solid #f3f3f3;
+	outline: 0;
+	width: 100%;
+	box-sizing: border-box;
+	margin:0;
+}
+button:disabled img, button[disabled], .button-2.disabled img, .button-2.disabled {
+	opacity: 0.3;
+}
+.button-1.disabled, .button-1.disabled:hover, .button-1.disabled:focus, .button-1.disabled:active,
+.button-2.disabled, .button-2.disabled:hover, .button-2.disabled:focus, .button-2.disabled:active,
+button:disabled, button[disabled], button:disabled:hover, button[disabled]:hover,
+button:disabled:active, button[disabled]:active, button:disabled:focus, button[disabled]:focus {
+	cursor: not-allowed;
+	background-color: #BEBEBE;
+	color: #8C8C8C;
+}
+button, input[type="email"], input[type="text"], input[type="password"], input[type="checkbox"], label, textarea {
+	background-clip: padding-box;
+	border-radius:0;
+}
+.styled-checkbox:hover, input[type="radio"]:hover, select:hover, textarea:hover, input[type="email"]:hover, input[type="text"]:hover, input[type="password"]:hover {
+	border:1px solid #3D3D3D;
+}
+.styled-checkbox:focus, input[type="radio"]:focus, select:focus,input:focus, textarea:focus, input[type="email"]:focus, input[type="text"]:focus, input[type="password"]:focus {
+	border: 1px solid #0062FF;
+}
+.styled-checkbox:disabled, input[type="radio"]:disabled, select:disabled, textarea:disabled, input[type="email"]:disabled, input[type="text"]:disabled, input[type="password"]:disabled {
+	border:1px solid #f3f3f3;
+	cursor: not-allowed;
+}
+.styled-checkbox:disabled:hover, input[type="radio"]:disabled:hover, select:disabled:hover, textarea:disabled:hover, input[type="email"]:disabled:hover, input[type="text"]:disabled:hover, input[type="password"]:disabled:hover {
+	border:1px solid #f3f3f3;
+}
+.styled-checkbox:disabled:focus, input[type="radio"]:disabled:focus, select:disabled:focus,input:focus, textarea:disabled:focus, input[type="email"]:disabled:focus, input[type="text"]:disabled:focus, input[type="password"]:disabled:focus {
+	border:1px solid #f3f3f3;
+}
+.search-results-box {
+  clear:both;
+  margin-top:2rem;
+}
+.search-results-summary {
+  color: #888;
+  margin-bottom:0.5rem;
+}
+table {
+  width:100%;
+}
+tr {
+  text-align:left;
+}
+th {
+  cursor:pointer;
+}
+th.active {
+  font-weight:600;
+}
+th, td {
+  padding:1rem 0 1rem 0;
+}
+tbody tr {
+  text-transform: uppercase;
+  font-family:'IBM Plex Mono', monospace;
+}
+thead {
+  border-bottom: 1px solid #C0C0C0;
+}
+.lip-exit {
+  position: absolute;
+  right: 0.5rem;
+  top: 0;
+  line-height: 1rem;
+  opacity:0.66;
+  transition:0.3s opacity linear;
+}
+.lip-exit:hover {
+  opacity:1;
+}
+.lip {
+  box-sizing:border-box;
+  position: fixed;
+  left: 0;
+  bottom: -3rem;
+  padding: 1rem;
+  color: #FFF;
+  width: 100%;
+  line-height:1rem;
+  transition:bottom 0.3s ease-out;
+}
+.lip.active {
+  bottom:0;
+}
+.lip.error {
+  background-color: #902B2B;
+}
+.lip.success {
+  background-color: #14C08D;
+}
