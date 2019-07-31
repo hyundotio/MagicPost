@@ -316,6 +316,17 @@ table {
 tr {
   text-align:left;
 }
+th[aria-sort="descending"], th[aria-sort="ascending"]{
+  font-weight:600;
+}
+th[aria-sort="ascending"]:after {
+  content:'↑';
+  margin-left:1rem;
+}
+th[aria-sort="descending"]:after {
+  content:'↓';
+  margin-left:1rem;
+}
 th {
   cursor:pointer;
 }

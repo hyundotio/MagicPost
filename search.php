@@ -36,7 +36,14 @@
   <script src="./js/lip.js"></script>
   <script src="./js/mobile.js"></script>
   <script src="./js/search.js"></script>
-  <script src="./js/tablesort.js"></script>
+  <script src="./js_include/tablesort.min.js"></script>
+  <script src="./js_include/tablesort.date.min.js"></script>
+  <script>
+    const tableEl = document.getElementsByTagName('table');
+    if(tableEl.length > 0){
+      new Tablesort(tableEl[0]);
+    }
+  </script>
 </body>
 
 </html>
