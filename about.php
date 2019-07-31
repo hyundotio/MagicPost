@@ -36,7 +36,7 @@
       <section>
         <h3>Links</h3>
         <ul class="credits-list">
-          <li><a class="b-link" href="https://github.com/hyundotio/magicpost" target="_blank" rel="noopener noreferrer nofollow">MagicPad GitHub</a></li>
+          <li><a class="b-link" href="https://github.com/hyundotio/magicpost" target="_blank" rel="noopener noreferrer nofollow">MagicPost GitHub</a></li>
         </ul>
       </section>
       <section>
