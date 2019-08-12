@@ -24,7 +24,7 @@
     </nav>
     <div class="search-box">
       <h1>MagicPost</h1>
-      <h3>Search, post, and view encrypted messages. 100% free.</h3>
+      <h3>Search, post, and view encrypted messages. 100% free and open-source.</h3>
       <form action="./search.php" method="get" class="index-search-form">
           <input class="search-bar" type="text" placeholder="Search message IDs and fingerprints" name="search">
           <input type="image" class="search-button disabled" src="./assets/img/search.png" value="search">
