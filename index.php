@@ -1,14 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <?php include 'html_header.php' ?>
 </head>
 <body>
   <main class="home">
-    <nav class="mobile-nav">
-      <h1>MagicPost</h1>
-      <button class="mobile-menu"><img src="./assets/img/menu.svg"/></button>
-    </nav>
     <nav class="main-nav">
       <ul>
         <li>
@@ -26,13 +22,13 @@
       <h1>MagicPost</h1>
       <h3>Search, post, and view encrypted messages. 100% free and open-source.</h3>
       <form action="./search.php" method="get" class="index-search-form">
-          <input class="search-bar" type="text" placeholder="Search message IDs and fingerprints" name="search">
-          <input type="image" class="search-button disabled" src="./assets/img/search.png" value="search">
+          <label for="search-bar">Search</label>
+          <input id="search-bar" class="search-bar" type="text" placeholder="Search message IDs and fingerprints" name="search">
+          <label for="search-button">Submit</label>
+          <input id="search-button" type="image" class="search-button disabled" src="./assets/img/search.png" alt="Search button" value="search">
       </form>
-      <a href="https://app.magicpad.io" target="_blank">Encrypt & decrypt using MagicPad</a>
+      <a href="https://app.magicpad.io" target="_blank" rel="noopener noreferrer nofollow">Encrypt & decrypt using MagicPad</a>
     </div>
   </main>
-  <script src="./js/mobile.js"></script>
-  <script src="./js/search.js"></script>
 </body>
 </html>

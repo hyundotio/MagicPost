@@ -10,6 +10,7 @@
 <meta name="description" content="Free PGP message bin.">
 <meta name="keywords" content="encryption,free,pgp,gpg,secure,message,mail,email">
 <meta name="author" content="Hyun Kyu Seo">
+<meta name="viewport" content="width=device-width, initial-scale=1, minimal-ui">
 <link href="./favicon/apple-icon-57x57.png" rel="apple-touch-icon" sizes="57x57">
 <link href="./favicon/apple-icon-60x60.png" rel="apple-touch-icon" sizes="60x60">
 <link href="./favicon/apple-icon-72x72.png" rel="apple-touch-icon" sizes="72x72">

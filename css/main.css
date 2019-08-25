@@ -10,22 +10,39 @@ button, label {
 	outline:0;
 	background-color:transparent;
 	font-size: 1em;
-	font-family: 'IBM Plex Sans';
+	font-family: 'IBM Plex Sans', sans-serif;
 	margin: 0;
 	padding: 0;
 	border: 0;
 	height: 3em;
 }
+label {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+}
 a {
-  color:#0066FF;
+  color:#000;
   text-decoration: none;
-  transition:0.2s color ease-in;
+  position:relative;
 }
-a:focus {
-  color: #0530AD;
+a::after {
+  content:' ';
+  width:100%;
+  height:1px;
+  bottom:0.05rem;
+  left:0;
+  transition:0.2s ease-in background-color;
+  background-color:rgba(0,0,0,1);
+  position:absolute;
 }
-a:hover {
-  color: #054ADA;
+a:hover::after {
+  background-color:rgba(0,0,0,0);
 }
 form {
   overflow:hidden;

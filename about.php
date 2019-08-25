@@ -1,14 +1,10 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
   <?php include 'html_header.php' ?>
 </head>
 <body>
   <main>
-    <nav class="mobile-nav">
-      <h1>MagicPost</h1>
-      <button class="mobile-menu"><img src="./assets/img/menu.svg"/></button>
-    </nav>
     <nav class="main-nav">
       <ul>
         <li>
@@ -44,6 +40,5 @@
       </section>
     </div>
   </main>
-  <script src="./js/mobile.js"></script>
 </body>
 </html>
