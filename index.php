@@ -4,6 +4,18 @@
   <?php include 'html_header.php' ?>
 </head>
 <body>
+  <script>
+  (function () {
+    var s = document.createElement('script');
+    s.type = 'text/javascript';
+    s.async = true;
+    s.src = 'https://app.termly.io/embed.min.js';
+    s.id = '9cfc8568-1d78-4581-8952-82cb1ad38b63';
+    s.setAttribute("data-name", "termly-embed-banner");
+    var x = document.getElementsByTagName('script')[0];
+    x.parentNode.insertBefore(s, x);
+  })();
+</script>
   <main class="home">
     <nav class="main-nav">
       <ul>
