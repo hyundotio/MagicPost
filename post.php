@@ -27,15 +27,15 @@
       <form action="./post.php" method="post">
         <section>
           <h3>Your fingerprint</h3>
-          <input type="text" placeholder="20 digit hex" name="fromkey" value="<?php echo $_GET['from']; ?>">
+          <input type="text" placeholder="20 digit hex" name="fromkey">
         </section>
         <section>
           <h3>Recipient fingerprint</h3>
-          <input type="text" placeholder="20 digit hex" name="tokey" value="<?php echo $_GET['to']; ?>">
+          <input type="text" placeholder="20 digit hex" name="tokey">
         </section>
         <section>
           <h3>Message</h3>
-          <textarea name="message" placeholder="----BEGIN PGP MESSAGE-----"><?php echo $_GET['msg']; ?></textarea>
+          <textarea name="message" placeholder="----BEGIN PGP MESSAGE-----"></textarea>
         </section>
         <section>
           <input type="submit" class="button-1 disabled post-submit" value="Post">

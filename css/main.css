@@ -30,16 +30,12 @@ a {
   color:#000;
   text-decoration: none;
   position:relative;
-  display: inline-block;
-}
-td a, th a{
-  display: table-cell;
 }
 a::after {
   content:' ';
   width:100%;
   height:1px;
-  bottom:-0.25rem;
+  bottom:0.05rem;
   left:0;
   transition:0.2s ease-in background-color;
   background-color:rgba(0,0,0,1);
