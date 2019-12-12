@@ -47,7 +47,6 @@
     ?>
   </main>
   <script src="./js/lip.js"></script>
-  <script src="./js/mobile.js"></script>
   <script src="./js/post.js"></script>
 </body>
 </html>
