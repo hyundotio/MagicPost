@@ -44,6 +44,12 @@ a::after {
 a:hover::after {
   background-color:rgba(0,0,0,0);
 }
+.lip a::after {
+  background-color:rgba(255,255,255,1);
+}
+.lip a:hover::after {
+  background-color:rgba(255,255,255,0);
+}
 form {
   overflow:hidden;
   position:relative;
@@ -112,7 +118,6 @@ line-height: 1.33em;
 }
 .lip a {
   color:#FFF;
-  text-decoration: underline;
 }
 .lip a:focus, .lip a:hover, .lip:active {
   color:#FFF;
