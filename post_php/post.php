@@ -44,13 +44,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $errorFlag = true;
   }
 
-  if(!$errorFlag && !preg_match('/^[0-9A-Fa-f]{40}.*/', $cleanToKey)){
-   $errorMsg = 'Recipient fingerprint is not valid.';
+  if(!$errorFlag && !preg_match('/^[0-9A-Fa-f]{40}.*/', $cleanFromKey)){
+   $errorMsg = 'Your fingerprint is not valid.';
    $errorFlag = true;
   }
 
-  if(!$errorFlag && !preg_match('/^[0-9A-Fa-f]{40}.*/', $cleanFromKey)){
-   $errorMsg = 'Your fingerprint is not valid.';
+  if(!$errorFlag && !preg_match('/^[0-9A-Fa-f]{40}.*/', $cleanToKey)){
+   $errorMsg = 'Recipient fingerprint is not valid.';
    $errorFlag = true;
   }
 
@@ -79,6 +79,20 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
   if($errorFlag){
     echo '<div class="lip error active"><span>'.$errorMsg.'</span><button class="lip-exit"><img src="./assets/img/exit.svg"></button></div>';
+    $errorScript = '<script>';
+    if(!empty($cleanStr)){
+      $errorScript = $errorScript.' document.getElementById("message").value = decodeURIComponent("'.rawurlencode($cleanStr).'"); ';
+    }
+    if(!empty($cleanToKey)){
+      $errorScript = $errorScript.' document.getElementById("tokey").value = decodeURIComponent("'.rawurlencode($cleanToKey).'"); ';
+    }
+    if(!empty($cleanFromKey)){
+      $errorScript = $errorScript.' document.getElementById("fromkey").value = decodeURIComponent("'.rawurlencode($cleanFromKey).'"); ';
+    }
+    $errorScript = $errorScript.'</script>';
+    if(strlen($errorScript) > 17){
+      echo $errorScript;
+    }
     //$response['errors']  = $errorMsg;
   } else {
     echo '<div class="lip success active"><span>'.$returnMsg.'</span><button class="lip-exit"><img src="./assets/img/exit.svg"></button></div>';

@@ -37,15 +37,18 @@
       <form action="./post.php" method="post">
         <section>
           <h3>Your fingerprint</h3>
-          <input type="text" placeholder="40 digit hex" name="fromkey" value="<?php echo $_GET['from']; ?>">
+          <label for="fromkey">Your fingerprint</label>
+          <input spellcheck="false" class="mono-input" type="text" id="fromkey" placeholder="40 digit hex" name="fromkey" value="<?php echo $cleanFromKey; ?>">
         </section>
         <section>
           <h3>Recipient fingerprint</h3>
-          <input type="text" placeholder="40 digit hex" name="tokey" value="<?php echo $_GET['to']; ?>">
+          <label for="tokey">Recipient fingerprint</label>
+          <input spellcheck="false" class="mono-input" type="text" id="tokey" placeholder="40 digit hex" name="tokey" value="<?php echo $cleanToKey; ?>">
         </section>
         <section>
           <h3>Message</h3>
-          <textarea name="message" placeholder="----BEGIN PGP MESSAGE-----"><?php echo $_GET['msg']; ?></textarea>
+          <label for="message">Your fingerprint</label>
+          <textarea spellcheck="false" class="mono-input" name="message" id="message" placeholder="----BEGIN PGP MESSAGE-----"><?php echo $cleanStr; ?></textarea>
         </section>
         <section>
           <input type="submit" class="button-1 disabled post-submit" value="Post">
@@ -53,12 +56,12 @@
       </form>
     </section>
     </div>
-    <?php
-      include './post_php/post.php';
-    ?>
   </main>
   </div>
-  <script src="./js/lip.js"></script>
   <script src="./js/post.js"></script>
+  <?php
+    include './post_php/post.php';
+  ?>
+  <script src="./js/lip.js"></script>
 </body>
 </html>

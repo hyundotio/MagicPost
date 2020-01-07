@@ -28,7 +28,7 @@
       <section class="search-header-box">
         <h2>MagicPost</h2>
         <form action="./search.php" method="get">
-            <input class="search-bar" type="text" placeholder="Search message IDs and fingerprints" name="search">
+            <input spellcheck="false" class="search-bar mono-input" type="text" placeholder="Search message IDs and fingerprints" name="search">
             <input type="image" class="search-button disabled" src="./assets/img/search.png" alt="Search button" value="search" name="search">
         </form>
       </section>

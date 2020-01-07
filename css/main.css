@@ -63,11 +63,11 @@ input:focus, button:focus, textarea:focus, input:active, button:active, textarea
   border-color:transparent;
 }
 input, button, textarea {
-  -moz-outline-style: none;
   font-family:'IBM Plex Sans', sans-serif;
+  -moz-outline-style: none;
   outline:none;
 }
-input, textarea {
+input.mono-input, textarea.mono-input {
   font-family:'IBM Plex Mono', monospace;
 }
 button {
