@@ -404,7 +404,7 @@ thead {
 }
 .lip-exit {
   position: absolute;
-  right: 0.5rem;
+  right: 1.5rem;
   top: 0;
   line-height: 1rem;
   opacity:0.66;
@@ -415,17 +415,19 @@ thead {
 }
 .lip {
   box-sizing:border-box;
+  z-index:-1;
   position: fixed;
   left: 0;
-  bottom: -3rem;
-  padding: 1rem;
+  top: -3rem;
+  padding: 1rem 2rem;
   color: #FFF;
   width: 100%;
   line-height:1rem;
-  transition:bottom 0.3s ease-out;
+  transition:top 0.3s ease-out;
 }
 .lip.active {
-  bottom:0;
+  z-index: 0;
+  top:3rem;
 }
 .lip.error {
   background-color: #902B2B;
