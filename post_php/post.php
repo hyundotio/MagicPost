@@ -40,7 +40,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   }
 
   if ($result->num_rows > 0) {
-    $errorMsg = 'A duplicate message exists. <a href="./search.php?search='.$messageSha.'">Click to view</a>';
+    $errorMsg = 'A duplicate message exists. <a href="./search.php?search='.$messageSha.'" target="_blank" rel="noopener noreferrer nofollow">Click to view</a>';
     $errorFlag = true;
   }
 
@@ -69,7 +69,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
    VALUES ('$messageSha', '$cleanFromKey', '$cleanToKey', '$time')";
    if ($conn->query($sql) === TRUE) {
      file_put_contents(($saveDir.$filename),$cleanStr);
-     $returnMsg = 'Message successfully posted. <a href="./search.php?search='.$messageSha.'">Click to view</a>';
+     $returnMsg = 'Message successfully posted. <a href="./search.php?search='.$messageSha.'" target="_blank" rel="noopener noreferrer nofollow">Click to view</a>';
    } else {
      $errorFlag = true;
      $errorMsg = 'Submission error. Please try again.';

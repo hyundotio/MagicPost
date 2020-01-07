@@ -48,7 +48,7 @@
         <section>
           <h3>Message</h3>
           <label for="message">Your fingerprint</label>
-          <textarea spellcheck="false" class="mono-input" name="message" id="message" placeholder="----BEGIN PGP MESSAGE-----"><?php echo $cleanStr; ?></textarea>
+          <textarea spellcheck="false" class="mono-input" name="message" id="message" placeholder="-----BEGIN PGP MESSAGE-----"><?php echo $cleanStr; ?></textarea>
         </section>
         <section>
           <input type="submit" class="button-1 disabled post-submit" value="Post">
