@@ -10,6 +10,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $cleanStr = strip_tags($str);
   $cleanToKey = strtolower(preg_replace('/\s+/', '', strip_tags($toKey)));
   $cleanFromKey = strtolower(preg_replace('/\s+/', '', strip_tags($fromKey)));
+  $cleanToKey = preg_replace('/[^A-fa-f0-9\-]/', '', $cleanToKey);
+  $cleanFromKey = preg_replace('/[^A-fa-f0-9\-]/', '', $cleanFromKey);
   $saveDir = './posts/';
 
   $errorFlag = false;
@@ -50,8 +52,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
    $errorFlag = true;
   }
 
-  if(!$errorFlag && strlen($cleanStr) > 1000000){
-   $errorMsg = 'The message is over 1mb.';
+  if(!$errorFlag && strlen($cleanStr) > 5000000){
+   $errorMsg = 'The message is over 5mb.';
    $errorFlag = true;
   }
 

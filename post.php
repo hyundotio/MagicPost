@@ -37,11 +37,11 @@
       <form action="./post.php" method="post">
         <section>
           <h3>Your fingerprint</h3>
-          <input type="text" placeholder="20 digit hex" name="fromkey" value="<?php echo $_GET['from']; ?>">
+          <input type="text" placeholder="40 digit hex" name="fromkey" value="<?php echo $_GET['from']; ?>">
         </section>
         <section>
           <h3>Recipient fingerprint</h3>
-          <input type="text" placeholder="20 digit hex" name="tokey" value="<?php echo $_GET['to']; ?>">
+          <input type="text" placeholder="40 digit hex" name="tokey" value="<?php echo $_GET['to']; ?>">
         </section>
         <section>
           <h3>Message</h3>

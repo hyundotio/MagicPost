@@ -3,6 +3,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
   include './inc_php/dbcred.php';
   $searchParams = $_GET["search"];
   $cleanSearchParams = strtolower(preg_replace('/\s+/', '', strip_tags($searchParams)));
+  $cleanSearchParams = preg_replace('/[^A-fa-f0-9\-]/', '', $cleanSearchParams);
   $response = array();
   $returnMsg = '';
   $errorFlag = false;
@@ -11,7 +12,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
   if(empty($cleanSearchParams)){
     $errorFlag = true;
     $errorMsg = 'Search box is empty.';
-  } elseif (!preg_match('/^[0-9A-Fa-f].*/', $cleanSearchParams)){
+  } elseif (!preg_match('/^[0-9A-Fa-f]{40}.*/', $cleanSearchParams)){
     $errorFlag = true;
     $errorMsg = 'Not a fingerprint or message ID.';
   } else {
