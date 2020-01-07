@@ -12,6 +12,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   $cleanFromKey = strtolower(preg_replace('/\s+/', '', strip_tags($fromKey)));
   $cleanToKey = preg_replace('/[^A-fa-f0-9\-]/', '', $cleanToKey);
   $cleanFromKey = preg_replace('/[^A-fa-f0-9\-]/', '', $cleanFromKey);
+  $cleanToKey = substr($cleanToKey,0,40);
+  $cleanFromKey = substr($cleanFromKey,0,40);
   $saveDir = './posts/';
 
   $errorFlag = false;

@@ -4,6 +4,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
   $searchParams = $_GET["search"];
   $cleanSearchParams = strtolower(preg_replace('/\s+/', '', strip_tags($searchParams)));
   $cleanSearchParams = preg_replace('/[^A-fa-f0-9\-]/', '', $cleanSearchParams);
+  $cleanSearchParams = substr($cleanSearchParams,0,40);
   $response = array();
   $returnMsg = '';
   $errorFlag = false;
