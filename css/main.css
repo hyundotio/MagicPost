@@ -67,6 +67,9 @@ input, button, textarea {
   font-family:'IBM Plex Sans', sans-serif;
   outline:none;
 }
+input, textarea {
+  font-family:'IBM Plex Mono', monospace;
+}
 button {
   background-color: transparent;
   border:0;
@@ -301,7 +304,7 @@ textarea {
 	border: 1px solid #f3f3f3;
 	width: 100%;
 	height: 13em;
-	font-family: 'IBM Plex Sans', sans-serif;
+	font-family: 'IBM Plex Mono', monospace;
 	display: block;
 	clear: both;
 	padding: 0.5em 1em 1em 1em;
@@ -315,7 +318,7 @@ input[type="email"], input[type="text"], input[type="password"] {
 	background-color:#FFF;
 	color:#000;
 	transition: background-color 0.1s ease-out, border 0.1s ease-out;
-	font-family: 'IBM Plex Sans', sans-serif;
+	font-family:'IBM Plex Mono', monospace;
 	font-size: 1em;
 	padding: 0.5em 0.75em 0.75em 0.75em;
 	border: 1px solid #f3f3f3;

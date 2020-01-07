@@ -25,13 +25,13 @@
     </nav>
   </header>
   <main>
-      <div class="search-header-box">
+      <section class="search-header-box">
         <h2>MagicPost</h2>
         <form action="./search.php" method="get">
             <input class="search-bar" type="text" placeholder="Search message IDs and fingerprints" name="search">
             <input type="image" class="search-button disabled" src="./assets/img/search.png" alt="Search button" value="search" name="search">
         </form>
-      </div>
+      </section>
         <?php
           include './search_php/search.php';
         ?>
