@@ -24,12 +24,3 @@
 <link href="./favicon/favicon-32x32.png" rel="icon" sizes="32x32" type="image/png">
 <link href="./favicon/favicon-96x96.png" rel="icon" sizes="96x96" type="image/png">
 <link href="./favicon/favicon-16x16.png" rel="icon" sizes="16x16" type="image/png">
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-144995793-1"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'UA-144995793-1');
-</script>

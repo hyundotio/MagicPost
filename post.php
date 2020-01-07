@@ -4,7 +4,8 @@
   <?php include 'html_header.php' ?>
 </head>
 <body>
-  <main>
+  <div class="master-container">
+  <header>
     <nav class="mobile-nav">
       <h1>MagicPost</h1>
       <button class="mobile-menu"><img src="./assets/img/menu.svg"/></button>
@@ -15,15 +16,24 @@
           <a class="tab" href="./index.php">Search</a>
         </li>
         <li>
-          <a class="tab" href="./post.php">Post</a>
+          <a class="tab active" href="./post.php">Post</a>
         </li>
+      </ul>
+    </nav>
+    <nav class="about-nav">
+      <ul>
         <li>
           <a class="tab" href="./about.php">About</a>
         </li>
       </ul>
     </nav>
+  </header>
+  <main>
     <div class="content">
-      <h2>Post a message</h2>
+      <section>
+        <h2 class="page-header">Post a message</h2>
+      </section>
+      <section>
       <form action="./post.php" method="post">
         <section>
           <h3>Your fingerprint</h3>
@@ -41,11 +51,13 @@
           <input type="submit" class="button-1 disabled post-submit" value="Post">
         </section>
       </form>
+    </section>
     </div>
     <?php
       include './post_php/post.php';
     ?>
   </main>
+  </div>
   <script src="./js/lip.js"></script>
   <script src="./js/post.js"></script>
 </body>

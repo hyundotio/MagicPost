@@ -1,10 +1,13 @@
 html {
   font-size:14px;
+  width:100%;
+  height:100%;
 }
 body {
   font-family:'IBM Plex Sans', sans-serif;
   box-sizing: border-box;
-  background-color:#F6F6F6;
+  width:100%;
+  height:100%;
 }
 button, label {
 	outline:0;
@@ -27,32 +30,32 @@ label {
   width: 1px;
 }
 a {
-  color:#000;
+  transition:color 0.3s;
+}
+nav a {
+  color:#FFF;
   text-decoration: none;
   position:relative;
 }
-a::after {
-  content:' ';
-  width:100%;
-  height:1px;
-  bottom:0.05rem;
-  left:0;
-  transition:0.2s ease-in background-color;
-  background-color:rgba(0,0,0,1);
-  position:absolute;
+nav a:hover {
+  color:#6f6f6f;
 }
-a:hover::after {
-  background-color:rgba(0,0,0,0);
+.mpad-link {
+  color:#418CFF;
 }
-.lip a::after {
-  background-color:rgba(255,255,255,1);
+.mpad-link:hover {
+  color:#6EA6FF;
 }
-.lip a:hover::after {
-  background-color:rgba(255,255,255,0);
+a {
+  text-decoration: none;
+  color:#0062ff;
+}
+a:hover {
+  color:#054ADA;
 }
 form {
-  overflow:hidden;
-  position:relative;
+  width:100%;
+  position: relative;
 }
 input:focus, button:focus, textarea:focus, input:active, button:active, textarea:active {
   outline-style:none;
@@ -72,21 +75,59 @@ button {
   cursor:pointer;
 }
 main {
-  width:1024px;
+  max-width:1024px;
+  width: 100%;
   margin:auto;
-  padding:1rem 2rem 2rem 2rem;
+  padding:2rem 2rem 2rem 2rem;
   box-sizing:border-box;
+  display:flex;
+  align-items: center;
+  min-height:100%;
+  flex-direction: column;
+}
+.master-container {
+  box-sizing: border-box;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+.home-container {
+  min-height: 100vh;
 }
 h1 {
   font-size:2.5rem;
   margin-bottom:0.75rem;
 }
 h2 {
-  position: relative;
   font-size: 1.75em;
+}
+.page-header {
+  position: relative;
   margin-bottom: 1.5em;
 }
-h2::after {
+header {
+  background-color: #121212;
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  box-sizing: border-box;
+}
+header nav ul {
+  display: flex;
+  flex-direction: row;
+}
+header nav a.active::after{
+  content: ' ';
+  position: absolute;
+  width: 100%;
+  height: 3px;
+  background-color: #0062ff;
+  transition: background-color 0.2s ease-out;
+  border-radius: 6px;
+  left: 0;
+  bottom: calc(-1rem + 2px);
+}
+.page-header::after {
     content: ' ';
     background-color: #000;
     width: 1em;
@@ -117,6 +158,7 @@ line-height: 1.33em;
     line-height: 1.5em;
 }
 .lip a {
+  text-decoration: underline;
   color:#FFF;
 }
 .lip a:focus, .lip a:hover, .lip:active {
@@ -127,14 +169,11 @@ line-height: 1.33em;
 }
 .main-nav {
   box-sizing:border-box;
-  height:3rem;
 }
 .main-nav li {
-  float:left;
   margin-right:2rem;
 }
 .main-nav li:last-of-type {
-  float:right;
   margin:0 0 0 2rem;
 }
 .index-search-form {
@@ -150,14 +189,7 @@ line-height: 1.33em;
   margin-bottom:1rem;
 }
 .search-box {
-  padding:2rem;
-  width:40rem;
-  height: 15rem;
   box-sizing: border-box;
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  margin: -7.5rem 0 0 -20rem;
 }
 .search-button {
   position:absolute;
@@ -174,16 +206,13 @@ line-height: 1.33em;
   opacity:1;
 }
 .search-header-box {
-  margin-top: 0.75rem;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
-.search-header-box h1 {
-  float:left;
-  width:12rem;
-}
-.search-header-box .search-bar {
-  float: left;
-  width: calc(100% - 2rem);
-  margin-left: 2rem;
+.search-header-box h2 {
+  margin-right:2rem;
 }
 .mobile-nav {
   display:none;
@@ -194,6 +223,9 @@ line-height: 1.33em;
   font-size:1rem;
   text-align:center;
   margin:0.5rem 0 0.75rem 0;
+}
+.home {
+  flex-direction:column;
 }
 .home .mobile-nav h1 {
   color:transparent;
@@ -210,7 +242,7 @@ line-height: 1.33em;
   opacity:1;
 }
 .content {
-  margin-top:3rem;
+  width:100%;
 }
 .icon-button:hover {
   opacity:1;
@@ -231,7 +263,6 @@ line-height: 1.33em;
 	text-align: left;
 	box-sizing: border-box;
 	margin-right: 1px;
-	float: left;
 	display: block;
 	min-width: 11em;
 }
@@ -325,8 +356,8 @@ button, input[type="email"], input[type="text"], input[type="password"], input[t
 	border:1px solid #f3f3f3;
 }
 .search-results-box {
-  clear:both;
-  margin-top:2rem;
+  margin-top: 2rem;
+  width: 100%;
 }
 .search-results-summary {
   color: #888;
@@ -359,7 +390,7 @@ th.active {
   font-weight:600;
 }
 th, td {
-  padding:1rem 0 1rem 0;
+  padding:1rem;
 }
 tbody tr {
   text-transform: uppercase;
@@ -398,4 +429,16 @@ thead {
 }
 .lip.success {
   background-color: #14C08D;
+}
+
+@media only screen and (max-width: 570px) {
+  .home-container {
+    min-height:unset;
+  }
+  .search-header-box h2 {
+    display:none;
+  }
+  .home {
+    padding-top:4rem;
+  }
 }
