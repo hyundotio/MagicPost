@@ -1,6 +1,6 @@
 # MagicPost 1.0.0
 
-MagicPost is a server-side service to allow users to store PGP encrypted messages for sharing. Imagine PasteBin for PGP. Best used with [MagicPad](https://www.magicpad.io). It works both for all type of devices with a web browser.
+MagicPost is a server-side service to allow users to store PGP encrypted messages for sharing. By allowing uploads of only PGP encrypted messages and enabling search capability with only key fingerprints and SHA1 sum of messages, it is by nature, anonymous... theoretically secure. Imagine PasteBin for PGP. Best used with [MagicPad](https://www.magicpad.io). It works both for all type of devices with a web browser.
 
 ## Installation
 
