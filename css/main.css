@@ -312,6 +312,7 @@ textarea {
 	padding: 0.5em 1em 1em 1em;
 	font-size: 1em;
 	box-sizing: border-box;
+  background-color: #F3F3F3;
 }
 textarea:hover {
 	border:1px solid #0062FF;
