@@ -143,7 +143,6 @@ h3 {
 	font-size: 1em;
 	padding-bottom: 0.5em;
 	text-overflow: ellipsis;
-	white-space: nowrap;
 	overflow: hidden;
 	width:100%;
 }
@@ -177,19 +176,13 @@ line-height: 1.33em;
   margin-right:2rem;
 }
 .main-nav li:last-of-type {
-  margin:0 0 0 2rem;
+  margin:0;
 }
 .index-search-form {
   margin: 0.5rem 0 1rem;
 }
-.search-bar {
-  width:100%;
-  position:relative;
-  box-sizing: border-box;
-  padding:1rem 3rem 1rem 1rem;
-  border:0;
-  border-bottom:1px solid #C0C0C0;
-  margin-bottom:1rem;
+input[type="text"].search-bar {
+  padding-right:2.5em;
 }
 .search-box {
   box-sizing: border-box;
@@ -435,15 +428,148 @@ thead {
 .lip.success {
   background-color: #14C08D;
 }
-
+.mobile-sort-toggle {
+  display:none;
+  height: 1.5rem;
+  width: 12rem;
+  position: absolute;
+  z-index: 2;
+  transition:background-color 0.3s;
+  background-color:transparent;
+}
+.mobile-sort-toggle:hover {
+  background-color:rgba(255,255,255,0.5);
+}
+@media only screen and (max-width: 1024px) {
+  thead th {
+    padding:1rem 0 1rem 0;
+  }
+  td {
+    padding: 1rem 0 0 0;
+    font-size: 0.8625em;
+  }
+}
 @media only screen and (max-width: 570px) {
+  .mobile-sort-toggle {
+    display: block;
+  }
+  textarea {
+    height: 12.25em;
+  }
+  .search-header-box {
+    margin: 0;
+  }
+  .search-box {
+    margin-top: 2rem;
+  }
   .home-container {
     min-height:unset;
   }
   .search-header-box h2 {
     display:none;
   }
-  .home {
-    padding-top:4rem;
+  main {
+    padding: 1rem;
+  }
+  header {
+    padding: 1rem;
+  }
+  tr, td {
+    padding:0;
+  }
+  .search-results {
+    display:block;
+  }
+  .search-results tbody {
+    margin-top: 0.5rem;
+    display:block;
+  }
+  .search-results tbody tr {
+    flex-direction: column;
+    display:flex;
+    box-shadow: 0 0 4px rgba(0,0,0,0.1);
+    transition: 0.3s box-shadow;
+    border-radius: 8px;
+    margin-bottom: 1rem;
+    padding:1rem;
+    box-sizing:border-box;
+  }
+  .search-results tbody tr:hover {
+    box-shadow: 0 0 4px rgba(0,0,0,0.3);
+  }
+  .search-results tbody td {
+    display:block;
+  }
+  .search-results tbody tr:last-of-type {
+    margin:0;
+  }
+  .search-results tbody tr td:nth-of-type(1){
+    order: 1;
+  }
+  .search-results tbody tr td:nth-of-type(2){
+    font-weight:600;
+  }
+  .search-results tbody tr td:nth-of-type(2), .search-results tbody tr td:nth-of-type(3), .search-results tbody tr td:nth-of-type(4){
+    margin-bottom:0.75em;
+  }
+  .search-results tbody tr td:nth-of-type(1)::before, .search-results tbody tr td:nth-of-type(3)::before, .search-results tbody tr td:nth-of-type(4)::before{
+    font-family: 'IBM Plex Sans', sans-serif;
+    font-size:0.8625em;
+    display:block;
+    text-transform:initial;
+    margin-bottom:0.33em;
+  }
+  .search-results tbody tr td:nth-of-type(1)::before{
+    content:'Message ID';
+  }
+  .search-results tbody tr td:nth-of-type(3)::before{
+    content:'Sender fingerprint';
+  }
+  .search-results tbody tr td:nth-of-type(4)::before{
+    content:'Recipient fingerprint';
+  }
+  .search-results tbody tr td:nth-of-type(2) br{
+    display: inline-block;
+    width: 0.5em;
+    height: 1px;
+    content: ' ';
+  }
+  .search-results thead::before {
+    content:'Sort (hide)';
+    color: #0066FF;
+    display:block;
+  }
+  .search-results thead.mobile-sort-hidden:before {
+    content:'Sort (show)';
+  }
+  .search-results thead {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom:1rem;
+    border-bottom: 0;
+  }
+  .search-results thead tr th:first-of-type {
+    order:1;
+  }
+  .search-results thead tr {
+    display: flex;
+    flex-direction: column;
+  }
+  .search-results thead th {
+    transition: height 0.3s, color 0.3s;
+    height: 1.5em;
+    padding: 0;
+    display: block;
+    overflow: hidden;
+    color:#418CFF;
+  }
+  .search-results thead th:hover {
+    color:#6EA6FF;
+  }
+  .search-results .mobile-sort-hidden th {
+    height: 0;
+  }
+  .search-results thead th:last-of-type {
+    margin:0;
   }
 }

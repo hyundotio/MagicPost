@@ -35,7 +35,6 @@
         <?php
           include './search_php/search.php';
         ?>
-
   </main>
 </div>
   <script src="./js/lip.js"></script>

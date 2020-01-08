@@ -30,7 +30,7 @@
       <h3>Search, post, and view encrypted messages. 100% free and open-source.</h3>
       <form action="./search.php" method="get" class="index-search-form">
           <label for="search-bar">Search</label>
-          <input spellcheck="false" id="search-bar" class="search-bar mono-input" type="text" placeholder="Search message IDs and fingerprints" name="search">
+          <input spellcheck="false" id="search-bar" class="search-bar mono-input" type="text" placeholder="Message IDs and fingerprints" name="search">
           <label for="search-button">Submit</label>
           <input id="search-button" type="image" class="search-button disabled" src="./assets/img/search.png" alt="Search button" value="search">
       </form>
