@@ -1,6 +1,7 @@
 <?php
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   include './inc_php/dbcred.php';
+  include './config/app.php';
 
   $time = time();
   $str = $_POST["message"];
@@ -54,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
    $errorFlag = true;
   }
 
-  if(!$errorFlag && strlen($cleanStr) > 5000000){
+  if(!$errorFlag && strlen($cleanStr) > $filesizeLimit){
    $errorMsg = 'The message is over 5mb.';
    $errorFlag = true;
   }

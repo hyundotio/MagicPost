@@ -27,7 +27,7 @@
   <main>
     <div class="content about">
       <section>
-          <h2 class="page-header">About MagicPost</h2>
+          <h2 class="page-header">About MagicPost 1.0.0</h2>
           <p>MagicPost is an open-source, free pastebin-like service for encrypted messages. For all your encryption needs, please try <a href="https://www.magicpad.io" target="_blank">MagicPad</a>.</p>
       </section>
       <section>

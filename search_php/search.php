@@ -35,7 +35,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
       echo '<div class="search-results-box"><div class="search-results-summary">'.$returnMsg.'</div>';
       echo '<div class="mobile-sort-toggle"></div>';
       echo '<table class="search-results">';
-      echo '<thead id="result-thead"><tr><th>Message ID</th><th>Date and time</th><th>Sender fingerprint</th><th>Recipient fingerprint</th></tr></thead><tbody>';
+      echo '<thead id="result-thead"><tr><th>Message ID</th><th data-sort-default>Date and time</th><th>Sender fingerprint</th><th>Recipient fingerprint</th></tr></thead><tbody>';
       while($row = mysqli_fetch_assoc($result)) {
         //$rows[] = $row;
         echo '<tr>';

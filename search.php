@@ -44,7 +44,9 @@
   <script>
     const tableEl = document.getElementsByTagName('table');
     if(tableEl.length > 0){
-      new Tablesort(tableEl[0]);
+      new Tablesort(tableEl[0], {
+        descending: true
+      });
     }
   </script>
 </body>
