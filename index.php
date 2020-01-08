@@ -38,7 +38,7 @@
     </div>
   </main>
   <footer>
-			<small class="copyright">2019 © Hyun</small>
+			<small class="copyright">2020 © Hyun</small>
 			<ul class="social list mobile-flex">
 				<li>
 					<a href="https://twitter.com/hyunkseo" rel="noopener noreferrer nofollow" target="_blank"><img alt="Twitter" src="./ui/twitter.svg"></a>
