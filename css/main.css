@@ -436,6 +436,7 @@ thead {
   z-index: 2;
   transition:background-color 0.3s;
   background-color:transparent;
+  cursor:pointer;
 }
 .mobile-sort-toggle:hover {
   background-color:rgba(255,255,255,0.5);
