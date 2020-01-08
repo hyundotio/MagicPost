@@ -34,8 +34,11 @@ a {
 }
 nav a {
   color:#FFF;
+  min-width: 3.5em;
   text-decoration: none;
   position:relative;
+  padding: 0 1rem 0 1rem;
+  display:flex;
 }
 nav a:hover {
   color:#6f6f6f;
@@ -112,12 +115,15 @@ header {
   background-color: #121212;
   display: flex;
   justify-content: space-between;
-  padding: 1rem 2rem;
+  padding: 1rem;
   box-sizing: border-box;
 }
 header nav ul {
   display: flex;
   flex-direction: row;
+}
+.about-nav a {
+  justify-content: flex-end;
 }
 header nav a.active::after{
   content: ' ';
@@ -128,7 +134,7 @@ header nav a.active::after{
   transition: background-color 0.2s ease-out;
   border-radius: 6px;
   left: 0;
-  bottom: calc(-1rem + 2px);
+  bottom: calc(-1rem - 1px);
 }
 .page-header::after {
     content: ' ';
