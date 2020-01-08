@@ -258,6 +258,7 @@ input[type="text"].search-bar {
   border:0;
 }
 .button-1, .button-2, .button-9 {
+  -webkit-appearance: none;
 	transition: background-color 0.1s ease-out, color 0.1s ease-out, visibility 0.1s ease-out, opacity 0.1s ease-out;
 	line-height: 1em;
 	cursor: pointer;
@@ -267,6 +268,8 @@ input[type="text"].search-bar {
 	margin-right: 1px;
 	display: block;
 	min-width: 11em;
+  border-radius: 0;
+  font-size:1em;
 }
 .button-1, .button-2, .button-9 {
 	min-width:8.5em;
@@ -467,7 +470,7 @@ thead {
     right:0.5rem;
   }
   textarea {
-    height: 12.25em;
+    height: 12em;
   }
   .search-header-box {
     margin: 0;
