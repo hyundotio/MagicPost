@@ -37,6 +37,17 @@
       <a class="mpad-link" href="https://www.magicpad.io" target="_blank" rel="noopener noreferrer nofollow">Encrypt & decrypt using MagicPad</a>
     </div>
   </main>
+  <footer>
+			<small class="copyright">2019 © Hyun</small>
+			<ul class="social list mobile-flex">
+				<li>
+					<a href="https://twitter.com/hyunkseo" rel="noopener noreferrer nofollow" target="_blank"><img alt="Twitter" src="./ui/twitter.svg"></a>
+				</li>
+				<li>
+					<a href="https://github.com/hyundotio/magicpost" rel="noopener noreferrer nofollow" target="_blank"><img alt="GitHub Repo Link" src="./ui/github.svg"></a>
+				</li>
+			</ul>
+		</footer>
   </div>
 </body>
 </html>

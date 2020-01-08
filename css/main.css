@@ -450,6 +450,40 @@ thead {
 .mobile-sort-toggle:hover {
   background-color:rgba(255,255,255,0.5);
 }
+footer {
+    justify-content: space-between;
+    margin-top: 2rem;
+    display: flex;
+    position: relative;
+    padding: 1rem 2rem;
+    box-sizing: border-box;
+}
+.social {
+    display:flex;
+    margin: -5px 0 0 32px;
+}
+.social li {
+    margin-right: 0.5rem;
+}
+.social li a {
+    transition: 0.3s opacity linear;
+}
+.social img {
+    height: 24px;
+    width: 24px;
+    border-radius: 2px;
+}
+ul {
+  list-style:none;
+}
+.bottom-line {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 1rem;
+    height: 1rem;
+    background-color: #000;
+}
 @media only screen and (max-width: 910px) {
   thead th {
     padding:1rem 0 1rem 0;
@@ -460,6 +494,9 @@ thead {
   }
 }
 @media only screen and (max-width: 760px) {
+  footer {
+    padding:1rem;
+  }
   .mobile-sort-toggle {
     display: block;
   }
@@ -479,10 +516,13 @@ thead {
     margin-top: 2rem;
   }
   .home-container {
-    min-height:unset;
+    min-height: 100vh;
   }
   .search-header-box h2 {
     display:none;
+  }
+  .home {
+    margin: 4rem auto auto auto;
   }
   main {
     padding: 1rem;
