@@ -20,10 +20,12 @@ searchButton.addEventListener('click',function(e){
     e.preventDefault();
   }
 })
-mobileSortToggle.addEventListener('click',function(e){
-  if(resultThead.className == 'mobile-sort-hidden'){
-    resultThead.className = '';
-  } else {
-    resultThead.className = 'mobile-sort-hidden';
-  }
-})
+if(mobileSortToggle){
+  mobileSortToggle.addEventListener('click',function(e){
+    if(resultThead.className == 'mobile-sort-hidden'){
+      resultThead.className = '';
+    } else {
+      resultThead.className = 'mobile-sort-hidden';
+    }
+  })
+}

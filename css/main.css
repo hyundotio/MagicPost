@@ -431,7 +431,7 @@ thead {
 .mobile-sort-toggle {
   display:none;
   height: 1.5rem;
-  width: 12rem;
+  width: 9rem;
   position: absolute;
   z-index: 2;
   transition:background-color 0.3s;
@@ -453,6 +453,12 @@ thead {
 @media only screen and (max-width: 760px) {
   .mobile-sort-toggle {
     display: block;
+  }
+  .lip {
+    padding: 1rem;
+  }
+  .lip-exit {
+    right:0.5rem;
   }
   textarea {
     height: 12.25em;
