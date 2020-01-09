@@ -1,4 +1,17 @@
 <?php
+if ($_SERVER['REQUEST_METHOD'] === 'GET') {
+  $str = $_GET["msg"];
+  $toKey = $_GET["to"];
+  $fromKey = $_GET["from"];
+
+  $cleanStr = strip_tags($str);
+  $cleanToKey = strtolower(preg_replace('/\s+/', '', strip_tags($toKey)));
+  $cleanFromKey = strtolower(preg_replace('/\s+/', '', strip_tags($fromKey)));
+  $cleanToKey = preg_replace('/[^A-fa-f0-9\-]/', '', $cleanToKey);
+  $cleanFromKey = preg_replace('/[^A-fa-f0-9\-]/', '', $cleanFromKey);
+  $cleanToKey = substr($cleanToKey,0,40);
+  $cleanFromKey = substr($cleanFromKey,0,40);
+}
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   include './inc_php/dbcred.php';
   include './config/app.php';
@@ -63,42 +76,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
   if(!$errorFlag && (!is_int(strpos($cleanStr,"-----BEGIN PGP MESSAGE-----")) || !is_int(strpos($cleanStr,"-----END PGP MESSAGE-----")))){
    $errorMsg = 'This is not a valid encrypted PGP message.';
    $errorFlag = true;
-  }
-
-  if(!$errorFlag){
-   $sql = "INSERT INTO magicpost_main (filedir, fromkey, tokey, time)
-   VALUES ('$messageSha', '$cleanFromKey', '$cleanToKey', '$time')";
-   if ($conn->query($sql) === TRUE) {
-     file_put_contents(($saveDir.$filename),$cleanStr);
-     $returnMsg = 'Message successfully posted. <a href="./search.php?search='.$messageSha.'" target="_blank" rel="noopener noreferrer nofollow">Click to view</a>';
-   } else {
-     $errorFlag = true;
-     $errorMsg = 'Submission error. Please try again.';
-   }
-  }
-  $conn->close();
-
-  if($errorFlag){
-    echo '<div class="lip error active"><span>'.$errorMsg.'</span><button class="lip-exit"><img src="./assets/img/exit.svg"></button></div>';
-    $errorScript = '<script>';
-    if(!empty($cleanStr)){
-      $errorScript = $errorScript.' document.getElementById("message").value = decodeURIComponent("'.rawurlencode($cleanStr).'"); ';
-    }
-    if(!empty($cleanToKey)){
-      $errorScript = $errorScript.' document.getElementById("tokey").value = decodeURIComponent("'.rawurlencode($cleanToKey).'"); ';
-    }
-    if(!empty($cleanFromKey)){
-      $errorScript = $errorScript.' document.getElementById("fromkey").value = decodeURIComponent("'.rawurlencode($cleanFromKey).'"); ';
-    }
-    $errorScript = $errorScript.'</script>';
-    if(strlen($errorScript) > 17){
-      echo $errorScript;
-    }
-    //$response['errors']  = $errorMsg;
-  } else {
-    echo '<div class="lip success active"><span>'.$returnMsg.'</span><button class="lip-exit"><img src="./assets/img/exit.svg"></button></div>';
-    //$response['success'] = $returnMsg;
-    //$response['id'] = $messageSha;
   }
 }
 

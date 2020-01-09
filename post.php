@@ -1,3 +1,6 @@
+<?php
+  include './post_php/post.php';
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -60,7 +63,7 @@
   </div>
   <script src="./js/post.js"></script>
   <?php
-    include './post_php/post.php';
+    include './post_php/post_process.php';
   ?>
   <script src="./js/lip.js"></script>
 </body>
