@@ -395,8 +395,11 @@ th {
 th.active {
   font-weight:600;
 }
-th, td {
-  padding:1rem;
+thead th {
+  padding:1rem 0 1rem 0;
+}
+td {
+  padding: 1rem 0 0 0;
 }
 tbody tr {
   text-transform: uppercase;
@@ -485,16 +488,42 @@ ul {
     height: 1rem;
     background-color: #000;
 }
-@media only screen and (max-width: 910px) {
-  thead th {
-    padding:1rem 0 1rem 0;
+.search-results tbody tr td:nth-of-type(1){
+  font-family:'IBM Plex Sans',sans-serif;
+  min-width:6em;
+}
+.search-results tbody tr td:nth-of-type(3){
+  min-width:7.5em;
+}
+.search-results tbody tr td:nth-of-type(2), .search-results tbody tr td:nth-of-type(4){
+  min-width: 16em;
+}
+.search-results tbody tr td:nth-of-type(5) {
+  min-width: 14em;
+}
+
+.search-results tbody tr td:nth-of-type(1) a{
+  text-transform: initial;
+}
+@media only screen and (max-width: 940px) {
+  .search-results tbody tr td:nth-of-type(1){
+    min-width:5.5em;
+  }
+  .search-results tbody tr td:nth-of-type(3){
+    min-width:7em;
+  }
+  .search-results tbody tr td:nth-of-type(2), .search-results tbody tr td:nth-of-type(4){
+    min-width: 15.5em;
   }
   td {
-    padding: 1rem 0 0 0;
     font-size: 0.8625em;
   }
 }
-@media only screen and (max-width: 760px) {
+@media only screen and (max-width: 767px) {
+  .search-results-summary {
+    float:left;
+  }
+
   footer {
     padding:1rem;
   }
@@ -550,6 +579,7 @@ ul {
     margin-bottom: 1rem;
     padding:1rem;
     box-sizing:border-box;
+    flex-direction: column-reverse;
   }
   .search-results tbody tr:hover {
     box-shadow: 0 0 4px rgba(0,0,0,0.3);
@@ -560,53 +590,56 @@ ul {
   .search-results tbody tr:last-of-type {
     margin:0;
   }
-  .search-results tbody tr td:nth-of-type(1){
+  .search-results tbody tr td:nth-of-type(3){
     order: 1;
   }
-  .search-results tbody tr td:nth-of-type(2){
+  .search-results tbody tr td:nth-of-type(3){
     font-weight:600;
   }
-  .search-results tbody tr td:nth-of-type(2), .search-results tbody tr td:nth-of-type(3), .search-results tbody tr td:nth-of-type(4){
+  .search-results tbody tr td{
     margin-bottom:0.75em;
   }
-  .search-results tbody tr td:nth-of-type(1)::before, .search-results tbody tr td:nth-of-type(3)::before, .search-results tbody tr td:nth-of-type(4)::before{
+  .search-results tbody tr td:nth-of-type(1){
+    margin-bottom:0;
+    display: flex;
+    width:auto;
+  }
+  .search-results tbody tr td:nth-of-type(1) a:first-of-type{
+    margin-right:1em;
+  }
+  .search-results tbody tr td:nth-of-type(2)::before, .search-results tbody tr td:nth-of-type(4)::before, .search-results tbody tr td:nth-of-type(5)::before{
     font-family: 'IBM Plex Sans', sans-serif;
     font-size:0.8625em;
     display:block;
     text-transform:initial;
     margin-bottom:0.33em;
   }
-  .search-results tbody tr td:nth-of-type(1)::before{
+  .search-results tbody tr td:nth-of-type(2)::before{
     content:'Message ID';
   }
-  .search-results tbody tr td:nth-of-type(3)::before{
+  .search-results tbody tr td:nth-of-type(4)::before{
     content:'Sender fingerprint';
   }
-  .search-results tbody tr td:nth-of-type(4)::before{
+  .search-results tbody tr td:nth-of-type(5)::before{
     content:'Recipient fingerprint';
   }
-  .search-results tbody tr td:nth-of-type(2) br{
+  .search-results tbody tr td:nth-of-type(3) br{
     display: inline-block;
     width: 0.5em;
     height: 1px;
     content: ' ';
   }
-  .search-results thead::before {
-    content:'Sort (hide)';
-    color: #0066FF;
-    display:block;
-  }
-  .search-results thead.mobile-sort-hidden:before {
-    content:'Sort (show)';
-  }
   .search-results thead {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
     margin-bottom:1rem;
     border-bottom: 0;
   }
   .search-results thead tr th:first-of-type {
     order:1;
+  }
+  .search-results thead tr th:nth-of-type(1),.search-results thead tr th:nth-of-type(2),.search-results thead tr th:nth-of-type(4),.search-results thead tr th:nth-of-type(5){
+    display:none;
   }
   .search-results thead tr {
     display: flex;
@@ -622,9 +655,6 @@ ul {
   }
   .search-results thead th:hover {
     color:#6EA6FF;
-  }
-  .search-results .mobile-sort-hidden th {
-    height: 0;
   }
   .search-results thead th:last-of-type {
     margin:0;

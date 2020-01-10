@@ -33,13 +33,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'GET') {
       }
       $returnMsg = 'Found '.$rowsLen.$resultStr;
       echo '<div class="search-results-box"><div class="search-results-summary">'.$returnMsg.'</div>';
-      echo '<div class="mobile-sort-toggle"></div>';
       echo '<table class="search-results">';
-      echo '<thead id="result-thead"><tr><th>Message ID</th><th data-sort-default>Date and time</th><th>Sender fingerprint</th><th>Recipient fingerprint</th></tr></thead><tbody>';
+      echo '<thead id="result-thead"><tr><th></th><th>Message ID</th><th data-sort-default>Time</th><th>Sender fingerprint</th><th>Recipient fingerprint</th></tr></thead><tbody>';
       while($row = mysqli_fetch_assoc($result)) {
         //$rows[] = $row;
         echo '<tr>';
-        echo '<td><a href="./view.php?post='.$row['filedir'].'" target="_blank">'.chunk_split(chunk_split($row['filedir'], 4, ' '), 25, '<br>').'</a></td>';
+        echo '<td><a href="./view.php?post='.$row['filedir'].'" target="_blank">Raw</a><br><a href="./magicpad.php?post='.$row['filedir'].'" target="_blank">MagicPad</a></td>';
+        echo '<td>'.chunk_split(chunk_split($row['filedir'], 4, ' '), 25, '<br>').'</td>';
         echo '<td>'.date("Y-m-d<\b\\r>H:i:s", intval($row['time'])).'</td>';
         echo '<td>'.chunk_split(chunk_split($row['fromkey'], 4, ' '), 25, '<br>').'</td>';
         echo '<td>'.chunk_split(chunk_split($row['tokey'], 4, ' '), 25, '<br>').'</td>';
